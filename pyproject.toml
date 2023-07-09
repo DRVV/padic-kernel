@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "padickernel"
+version = "0.1.0"
+description = ""
+authors = ["ns"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+torch = "^1.13.1"
+gpjax = "^0.5.9"
+jaxlib = {version = "^0.4.4+cuda11.cudnn86", source = "jax"}
+jax = "^0.4.4"
+
+
+[[tool.poetry.source]]
+name = "jax"
+url = "https://storage.googleapis.com/jax-releases/jax_cuda_releases.html"
+default = false
+secondary = false
+
+
+[tool.poetry.group.dev.dependencies]
+ipython = "^8.10.0"
+pytest = "^7.2.1"
+ipykernel = "^6.21.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
